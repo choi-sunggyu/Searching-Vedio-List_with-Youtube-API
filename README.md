@@ -17,13 +17,13 @@ Searching_Engine
 ```
 
 ## 사전 준비사항
-1. YouTube Data API 활성화
+* YouTube Data API 활성화
   1) 좌측 메뉴에서 "API 및 서비스" → "라이브러리" 클릭
   2) "YouTube Data API v3" 검색
   3) 검색 결과에서 "YouTube Data API v3" 클릭
   4) "사용" 버튼 클릭
 
-2. API 키 생성
+* API 키 생성
   1) 좌측 메뉴에서 "API 및 서비스" → "사용자 인증 정보" 클릭
   2) 상단의 "+ 사용자 인증 정보 만들기" 클릭
   3) "API 키" 선택
@@ -31,8 +31,8 @@ Searching_Engine
   5) (선택) "키 제한" 클릭하여 보안 설정
    - 애플리케이션 제한사항: HTTP 리퍼러 설정
    - API 제한사항: YouTube Data API v3 선택
- 
-3. 아래 명령어 실행
+
+* 아래 명령어 실행
 ```text
 pip install fastapi uvicorn pyngrok python-multipart google-api-python-client
 npm install -g create-react-app
