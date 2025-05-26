@@ -2,9 +2,9 @@
 유튜브 api 활용하여  동영상 컨텐트 목록 검색
 
 ## 기술스택
-프론트 : React, Babel, HTML
-백: FastAPI, Python, Google API Cleient Library, Uvicorn
-개발 및 배포 도구 : Jinja2, pyngrok, CORS Middleware
+- 프론트 : React, Babel, HTML
+- 백: FastAPI, Python, Google API Cleient Library, Uvicorn
+- 개발 및 배포 도구 : Jinja2, pyngrok, CORS Middleware
 
 ## 애플리케이션 구조
 ```text
@@ -50,7 +50,24 @@ npm install -g create-react-app
 ngrok authtoken YOUR_NGROK_AUTH_TOKEN
 ```
  > `{{YOUR_AUTH_TOKEN}}`은 앞서 생성한 ngrok토큰 값
-2. 아래 명령어 실행
+
+2. YouTube API키 설정
+```
+# app.py 파일에서 YOUR_YOUTUBE_API_KEY_HERE를 실제 API 키로 교체
+import fileinput
+
+api_key = "여기에_실제_API_키_입력"
+
+with open('app.py', 'r') as file:
+    content = file.read()
+
+content = content.replace('YOUR_YOUTUBE_API_KEY_HERE', api_key)
+
+with open('app.py', 'w') as file:
+    file.write(content)
+```
+
+3. 아래 명령어 실행
 ```text
 python run_server.py
 ```
